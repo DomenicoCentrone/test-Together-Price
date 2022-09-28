@@ -22,7 +22,8 @@ export default function RecipeReviewCard() {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        axios.get('https://my.api.mockaroo.com/users.json?key=aa675110')
+        // axios.get('https://my.api.mockaroo.com/users.json?key=aa675110')
+        axios.get('https://raw.githubusercontent.com/DomenicoCentrone/DomenicoCentrone/main/datatest.json')
         .then(res => {
             setPosts(res.data)
         })
