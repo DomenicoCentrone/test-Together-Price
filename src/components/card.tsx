@@ -5,14 +5,13 @@ import CardHeader from '@mui/material/CardHeader';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Avatar from '@mui/material/Avatar';
-import IconButton, { IconButtonProps } from '@mui/material/IconButton';
+import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import AddIcon from '@mui/icons-material/Add';
 import { red } from '@mui/material/colors';
 import Skeleton from '@mui/material/Skeleton';
 import axios from 'axios';
 import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 
 
@@ -23,7 +22,7 @@ export default function RecipeReviewCard() {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        axios.get('https://raw.githubusercontent.com/DomenicoCentrone/DomenicoCentrone/main/datatest.json')
+        axios.get('https://my.api.mockaroo.com/users.json?key=aa675110')
         .then(res => {
             setPosts(res.data)
         })
